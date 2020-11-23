@@ -3,12 +3,10 @@
 class Database
 {
     // Name of the file
-    public $filename = 'churc.sql';
     public $servername = "localhost";
     public $username = "root";
     public $password = "";
     public $conn ;
-    public $mysql_database = 'dump';    
 
     function createConnection()
     {

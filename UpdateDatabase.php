@@ -6,12 +6,14 @@ class Database
     public $servername = "localhost";
     public $username = "root";
     public $password = "";
-    public $conn ;
+    public $conn;
+
+    public $dbName = "";
 
     function createConnection()
     {
         // Create connection
-    $this->conn = new mysqli($this->servername, $this->username, $this->password);
+        $this->conn = new mysqli($this->servername, $this->username, $this->password);
 
         if ($this->conn->connect_error) {
             die("Connection failed: " . $this->conn->connect_error);
@@ -26,7 +28,7 @@ class Database
     function createDatabase($dbName)
     {
         // Create database
-        $sql = "CREATE DATABASE ". $dbName;
+        $sql = "CREATE DATABASE " . $dbName;
         if ($this->conn->query($sql) === TRUE) {
             echo "Database created successfully";
         } else {
@@ -37,8 +39,9 @@ class Database
 
     function dropDatabase($dbName)
     {
+        $this->dbName = $dbName;
         // Create database
-        $sql = "DROP DATABASE ". $dbName;
+        $sql = "DROP DATABASE " . $dbName;
         if ($this->conn->query($sql) === TRUE) {
             echo "Database DROP successfully";
         } else {
@@ -46,20 +49,19 @@ class Database
         }
     }
 
-    function importDatabase($fileSQLDirectory) {
+    function importDatabase($fileSQLDirectory, $dbName)
+    {
         $sqlSource = file_get_contents($fileSQLDirectory);
+        $this->conn->query("USE" . $dbName);
         mysqli_multi_query($this->conn, $sqlSource);
-
-
     }
-    
 }
 
 
 $db = new Database();
 
 $db->createConnection();
-$db->createDatabase("myDB");
-$db->importDatabase("./bat/myDB.sql");
- //$db->dropDatabase("myDB");
+$db->createDatabase("ezactive_bfa");
+$db->importDatabase("./bat/ezactive_bfa.sql", "ezactive_bfa");
+// $db->dropDatabase("ezactive_bfa");
 $db->closeConnection();

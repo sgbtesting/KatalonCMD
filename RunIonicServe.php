@@ -37,7 +37,7 @@ class IonicServe {
         $this ->execInBackground("start cmd.exe @cmd /k" 
         . $this->batchDirectory . " " 
         . $this->projectDirectory . " "
-        . $this->host . " " 
+        . $this->hostname . " " 
         . $this->port      );        
 
    }

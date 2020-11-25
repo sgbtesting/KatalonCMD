@@ -14,16 +14,17 @@ class CommandLine {
         } 
     }
 
-    function runTestSuitByDirectory($suitDirectory)
-    {  $this ->batchDirectory = $suitDirectory;
-      //  error_log($this->directory);
-        $this ->execInBackground("start cmd.exe @cmd /k" . $this->batchDirectory);        
-    }
+   function runIonicServe ($batPath, $path, $host, $port) {
+        $this->batchDirectory = $batPath;
+      
+        $this ->execInBackground("start cmd.exe @cmd /k" . $this->batchDirectory . " " . $path . " " . $host . " " . $port );        
+
+   }
 
 }
 
 $cmd = new CommandLine ();
-$cmd->runTestSuitByDirectory (".\\bat\\test148_delete.bat");
+$cmd->runIonicServe(".\\bat\\installLibrary.bat", "C:\dev\\ezactivevn\hkjfl", "localhost", "8101");
 
 $jsonData = json_encode($cmd);
 

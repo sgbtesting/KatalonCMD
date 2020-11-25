@@ -40,8 +40,13 @@ class GitHub
 }
 
 $git = new GitHub();
-$git->setBatchRunGitDirectory("D:\\Dev\\KatalonCMD\\bat\\pullSourceGit.bat");
-$git->setSourceDirectory("D:\\Dev\\ezactivevn\\bfa");
+// $git->setBatchRunGitDirectory("D:\\Dev\\KatalonCMD\\bat\\pullSourceGit.bat");
+// $git->setSourceDirectory("D:\\Dev\\ezactivevn\\bfa");
+// $git->setGitBranch("develop");
+
+
+$git->setBatchRunGitDirectory("C:\\Dev\\KatalonCMD\\bat\\pullSourceGit.bat");
+$git->setSourceDirectory("C:\\Dev\\ezactivevn\\framework");
 $git->setGitBranch("develop");
 
 $git-> runGitByBranch();

@@ -1,3 +1,1 @@
-
-
-C:\Users\vn\Downloads\katalonc\Katalon_Studio_Engine_Windows_64-7.7.2\katalonc -noSplash -runMode=console -projectPath="D:\test\HKJFL_Test\hkjfl.prj" -retry=0 -testSuitePath="Test Suites/JFL-148 Suite/JFL-148-AddPlayersTo4Team" -executionProfile="default" -browserType="Chrome" -apiKey="e7b91b14-c17c-4c6f-a1d3-d7fdb37abb52" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true
+C:\test\ezactivevn\Framework\KRE\katalonc -noSplash -runMode=console -projectPath="C:\test\ezactivevn\HKJFL\hkjfl.prj" -retry=0 -testSuitePath="Test Suites/JFL-148 Suite/JFL-148-AddPlayersTo4Team" -executionProfile="default" -browserType="Chrome" -apiKey="e7b91b14-c17c-4c6f-a1d3-d7fdb37abb52" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true

@@ -1,0 +1,1 @@
+C:\test\ezactivevn\Framework\KRE\katalonc -noSplash -runMode=console -projectPath="C:\test\ezactivevn\HKJFL\hkjfl.prj" -retry=0 -testSuitePath="Test Suites/JFL-148 Suite/JFL148- DeletePlayers" -executionProfile="default" -browserType="Chrome" -apiKey="36ccffec-77bf-468b-acc3-1f09b2eb5b18"

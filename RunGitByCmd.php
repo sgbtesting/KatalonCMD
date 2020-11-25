@@ -39,17 +39,25 @@ class GitHub
 
 }
 
-$git = new GitHub();
+// $git = new GitHub();
 // $git->setBatchRunGitDirectory("D:\\Dev\\KatalonCMD\\bat\\pullSourceGit.bat");
 // $git->setSourceDirectory("D:\\Dev\\ezactivevn\\bfa");
 // $git->setGitBranch("develop");
 
 
-$git->setBatchRunGitDirectory("C:\\Dev\\KatalonCMD\\bat\\pullSourceGit.bat");
-$git->setSourceDirectory("C:\\Dev\\ezactivevn\\framework");
-$git->setGitBranch("develop");
+///////////////////////////////* THIS IS PULL FRAME WORK *//////////////////////////
+$pull = new GitHub();
 
-$git-> runGitByBranch();
+/* Set Value */
+$pull->setBatchRunGitDirectory("C:\\Dev\\KatalonCMD\\bat\\pullSourceGit.bat");
+$pull->setSourceDirectory("C:\\Dev\\ezactivevn\\framework");
+$pull->setGitBranch("develop");
+
+
+/* Pull project */
+$pull-> runGitByBranch();
+
+///////////////////////////////*///////////////////////////////*///////////////////////////////
 
 
 $jsonData = json_encode($git);

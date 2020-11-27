@@ -1,1 +1,0 @@
-katalonc -noSplash -runMode=console -projectPath="C:\test\ezactivevn\VF_TestCase\vf.prj" -retry=0 -testSuitePath="Test Suites/VF-181 Suite/VF-181 Test" -executionProfile="default" -browserType="Chrome" -apiKey="e7b91b14-c17c-4c6f-a1d3-d7fdb37abb52"

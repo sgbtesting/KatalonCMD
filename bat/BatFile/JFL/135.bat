@@ -1,1 +1,0 @@
-%1/katalonc -noSplash -runMode=console -projectPath=%2 -retry=0 -testSuitePath="Test Suites/Test-135 Suite/JFL-135" -executionProfile="default" -browserType="Chrome" -apiKey=%3 -reportFolder=%4 -reportFileName=%5

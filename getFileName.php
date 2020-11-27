@@ -105,9 +105,9 @@ function callGetSuiteName ($suiteFolder){
 
 
 
-//callGetFileName(); //echo project Katalon .prj name
+callGetFileName(); //echo project Katalon .prj name
 
- //callGetSuiteFolder(); //echo suite folder name
+callGetSuiteFolder(); //echo suite folder name
 
 callGetSuiteName("SGB-134"); // echo test suite file name
 

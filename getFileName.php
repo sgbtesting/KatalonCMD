@@ -1,13 +1,14 @@
-<?php 
-class GetAllFileName {
+<?php
+class GetAllFileName
+{
     public $batFileDirectory;
     public $katalonDirectory;
     public $fileExtension;
     public $suiteFolder;
     public $textFileDirectory;
-   
 
-   private function execInBackground($cmd)
+
+    private function execInBackground($cmd)
     {
         if (substr(php_uname(), 0, 7) == "Windows") {
             pclose(popen("start /B " . $cmd, "r"));
@@ -16,63 +17,70 @@ class GetAllFileName {
         }
     }
 
-    function setBatchFileDirectory ($batfile) {
-       $this->batFileDirectory =$batfile;
+    function setBatchFileDirectory($batfile)
+    {
+        $this->batFileDirectory = $batfile;
     }
 
-    function setKatalonDirectory ($katalonDirectory) {
+    function setKatalonDirectory($katalonDirectory)
+    {
         $this->katalonDirectory = $katalonDirectory;
     }
 
-    function setFileExtension ($fileExtension) {
+    function setFileExtension($fileExtension)
+    {
         $this->fileExtension = $fileExtension;
     }
 
-    function setTextFileDirectory ($textFileDirectory) {
+    function setTextFileDirectory($textFileDirectory)
+    {
         $this->textFileDirectory = $textFileDirectory;
     }
-    
-    function setSuiteFolder ($suiteFolder) {
+
+    function setSuiteFolder($suiteFolder)
+    {
         $this->suiteFolder = $suiteFolder;
-
-    }
-    
-    function getProjectName () {
-     
-        $this->execInBackground("start cmd.exe @cmd /k" . $this->batFileDirectory . " ". $this->katalonDirectory . " " . $this->fileExtension . " " . $this->textFileDirectory );
-        
     }
 
-    function getTestSuiteFolder () { 
+    function getProjectName()
+    {
 
-        $this->execInBackground("start cmd.exe @cmd /k" . $this->batFileDirectory . " ". $this->katalonDirectory . " " . $this->textFileDirectory );
+        $this->execInBackground("start cmd.exe @cmd /k" . $this->batFileDirectory . " " . $this->katalonDirectory . " " . $this->fileExtension . " " . $this->textFileDirectory);
     }
 
+    function getTestSuiteFolder()
+    {
 
-
-    function getTestSuiteName () {
-
-        $this->execInBackground("start cmd.exe @cmd /k" . $this->batFileDirectory . " ".  $this->katalonDirectory . " " . $this->suiteFolder  . " ". $this->textFileDirectory );
+        $this->execInBackground("start cmd.exe @cmd /k" . $this->batFileDirectory . " " . $this->katalonDirectory . " " . $this->textFileDirectory);
     }
 
 
 
+    function getTestSuiteName()
+    {
 
-    function writeToTextFile () {
-        $fh = fopen($this->textFileDirectory,'r');
+        $this->execInBackground("start cmd.exe @cmd /k" . $this->batFileDirectory . " " .  $this->katalonDirectory . " " . $this->suiteFolder  . " " . $this->textFileDirectory);
+    }
+
+
+
+
+    function writeToTextFile()
+    {
+        $fh = fopen($this->textFileDirectory, 'r');
         while ($line = fgets($fh)) {
-          // <... Do your work with the line ...>
-          // echo($line);
-          echo ($line."</br>");
+            // <... Do your work with the line ...>
+            // echo($line);
+            echo ($line . "</br>");
         }
         fclose($fh);
     }
-
 }
 
 
-function callGetFileName (){
-    $getFileName = new GetAllFileName ();
+function callGetFileName()
+{
+    $getFileName = new GetAllFileName();
     $getFileName->setBatchFileDirectory("C:\\dev\\KatalonCMD\\bat\\getFileName.bat");
     $getFileName->setKatalonDirectory("C:\\test\\ezactivevn\\SGB_Mobile_Test-");
     $getFileName->setFileExtension("*.prj");
@@ -82,20 +90,22 @@ function callGetFileName (){
 }
 
 
-function callGetSuiteFolder() {
-    $getSuiteFolder = new GetAllFileName ();
+function callGetSuiteFolder()
+{
+    $getSuiteFolder = new GetAllFileName();
     $getSuiteFolder->setBatchFileDirectory("C:\\dev\\KatalonCMD\\bat\\getSuiteFolder.bat");
-    $getSuiteFolder->setKatalonDirectory("C:\\test\\ezactivevn\\SGB_Mobile_Test-");
+    $getSuiteFolder->setKatalonDirectory("C:\\test\\ezactivevn\\VF_TestCase");
     $getSuiteFolder->setTextFileDirectory("C:\\dev\\KatalonCMD\\suiteFolder.txt");
     $getSuiteFolder->getTestSuiteFolder();
     $getSuiteFolder->writeToTextFile();
 }
 
 
-function callGetSuiteName ($suiteFolder){
-    $getSuiteName = new GetAllFileName ();
+function callGetSuiteName($suiteFolder)
+{
+    $getSuiteName = new GetAllFileName();
     $getSuiteName->setBatchFileDirectory("C:\\dev\\KatalonCMD\\bat\\getSuiteName.bat");
-    $getSuiteName->setKatalonDirectory("C:\\test\\ezactivevn\\SGB_Mobile_Test-");
+    $getSuiteName->setKatalonDirectory("C:\\test\\ezactivevn\\VF_TestCase");
     $getSuiteName->setSuiteFolder($suiteFolder);
     $getSuiteName->setFileExtension("*.ts");
     $getSuiteName->setTextFileDirectory("C:\\dev\\KatalonCMD\\suiteName.txt");
@@ -103,18 +113,28 @@ function callGetSuiteName ($suiteFolder){
     $getSuiteName->writeToTextFile();
 }
 
+function findStringInTextFile($search, $file)
+{
+    $file = file($file);
 
+    foreach ($file as $line) {
+        $line = trim($line);
+        if ($line == $search) {
 
-callGetFileName(); //echo project Katalon .prj name
+            echo $search . " is in the file.txt";
+            break;
+        } else {
+            echo $search . " not in the file";
+            break;
+        }
+    }
+}
+
+// callGetFileName(); //echo project Katalon .prj name
 
 callGetSuiteFolder(); //echo suite folder name
 
-callGetSuiteName("SGB-134"); // echo test suite file name
+findStringInTextFile("VF-12891237", "suiteFolder.txt");
 
 
-
-
-
-
-
-?>
+// callGetSuiteName("VF-166"); // echo test suite file name

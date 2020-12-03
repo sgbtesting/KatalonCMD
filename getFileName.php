@@ -110,39 +110,52 @@ class GetAllFileName
             // echo($line);
             echo ($line . "</br>");
         }
+
+        fclose($fh);
+    }
+
+    function countTestCase(){
+        $count = 0;
+        $fh = fopen($this->textFileDirectory, 'r');
+        while ($line = fgets($fh)) {
+            // <... Do your work with the line ...>
+            // echo($line);
+            $count ++;            
+        }
+        return $count;
         fclose($fh);
     }
 
 
 
-    function callGetFileName()
+    function callGetFileName($projectName)
     {
         $getFileName = new GetAllFileName();
-        $getFileName->setBatchFileDirectory("C:\\dev\\KatalonCMD\\bat\\getFileName.bat");
-        $getFileName->setKatalonDirectory("C:\\test\\ezactivevn\\SGB_Mobile_Test-");
+        $getFileName->setBatchFileDirectory("D:\\dev\\KatalonCMD\\bat\\getFileName.bat");
+        $getFileName->setKatalonDirectory("D:TestCase\\".$projectName);
         $getFileName->setFileExtension("*.prj");
-        $getFileName->setTextFileDirectory("C:\\dev\\KatalonCMD\\fileName.txt");
+        $getFileName->setTextFileDirectory("D:\\dev\\KatalonCMD\\fileName.txt");
         $getFileName->getProjectName();
         $getFileName->writeToTextFile();
     }
 
 
-    function callGetSuiteFolder()
+    function callGetSuiteFolder($projectName)
     {
         $getSuiteFolder = new GetAllFileName();
         $getSuiteFolder->setBatchFileDirectory("D:\\dev\\KatalonCMD\\bat\\getSuiteFolder.bat");
-        $getSuiteFolder->setKatalonDirectory("D:\\TestCase\\VF_TestCase");
+        $getSuiteFolder->setKatalonDirectory("D:TestCase\\".$projectName);
         $getSuiteFolder->setTextFileDirectory("D:\\dev\\KatalonCMD\\suiteFolder.txt");
         $getSuiteFolder->getTestSuiteFolder();
         $getSuiteFolder->writeToTextFile();
     }
 
 
-    function callGetSuiteName($suiteFolder)
+    function callGetSuiteName( $projectName, $suiteFolder)
     {
         $getSuiteName = new GetAllFileName();
         $getSuiteName->setBatchFileDirectory("D:\\dev\\KatalonCMD\\bat\\getSuiteName.bat");
-        $getSuiteName->setKatalonDirectory("D:\\TestCase\\VF_TestCase");
+        $getSuiteName->setKatalonDirectory("D:TestCase\\".$projectName);
         $getSuiteName->setSuiteFolder($suiteFolder);
         $getSuiteName->setFileExtension("*.ts");
         $getSuiteName->setTextFileDirectory("D:\\dev\\KatalonCMD\\suiteName.txt");
@@ -168,26 +181,28 @@ class GetAllFileName
         }
     }
 
-    function callGetCaseFolder () {
+    function callGetCaseFolder ($projectName) {
         $getCasesFolder = new GetAllFileName();
         $getCasesFolder->setBatchFileDirectory("D:\\dev\\KatalonCMD\\bat\\getCaseFolder.bat");
-        $getCasesFolder->setKatalonDirectory("D:\\TestCase\\VF_TestCase");
+        $getCasesFolder->setKatalonDirectory("D:\\TestCase\\".$projectName);
         $getCasesFolder->setTextFileDirectory("D:\\dev\\KatalonCMD\\caseFolder.txt");
         $getCasesFolder->getTestCaseFolder();
         $getCasesFolder->writeToTextFile();
     }
 
 
-    function callGetTestCaseName($caseFolder)
+    function callGetTestCaseName($projectName, $caseFolder)
     {
         $getTestCaseName = new GetAllFileName();
         $getTestCaseName->setBatchFileDirectory("D:\\dev\\KatalonCMD\\bat\\getCaseName.bat");
-        $getTestCaseName->setKatalonDirectory("D:\\TestCase\\VF_TestCase");
+        $getTestCaseName->setKatalonDirectory("D:\\TestCase\\".$projectName);
         $getTestCaseName->setTestCaseFolder($caseFolder);
         $getTestCaseName->setFileExtension("*.tc");
         $getTestCaseName->setTextFileDirectory("D:\\dev\\KatalonCMD\\CaseName.txt");
         $getTestCaseName->getTestCaseName();
         $getTestCaseName->writeToTextFile();
+        echo "<br> Number of Testcase: ";
+        echo $getTestCaseName->countTestCase();
     }
 }
 
@@ -202,9 +217,12 @@ $getFile = new GetAllFileName();
 // callGetSuiteFolder(); //echo suite folder name
 
 
-// echo $getFile->findStringInTextFile("VF-166", "suiteFolder.txt");
 
 // callGetSuiteName("VF-166"); // echo test suite file name
 
-$getFile->callGetCaseFolder();
-$getFile->callGetTestCaseName ("VF-166");
+// echo $getFile->findStringInTextFile("VF-166", "suiteFolder.txt");
+
+
+// $getFile->callGetCaseFolder("hkjfl_qc");
+// $getFile->callGetTestCaseName ("sgb_qc","SGB-135");
+$getFile->callGetTestCaseName ("vf_qc","VF-166");

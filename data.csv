@@ -1,0 +1,50 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Test-134,Chrome 85.0.4183.83,,,2020-12-01 20:24:26,2020-12-01 20:25:49,1m - 23.191s,ERROR
+,,,,,,,
+Test Cases/SGB-134/SGB_134,Chrome 85.0.4183.83,,,2020-12-01 20:24:30,2020-12-01 20:25:08,38.525s,PASSED
+"callTestCase(findTestCase(""Framework/Retore_Booking_DB""), [:], STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-01 20:24:30,2020-12-01 20:24:31,0.883s,PASSED
+"openBrowser(""http://localhost/ezactivevn/sgb/admin/index.html"")",Chrome 85.0.4183.83,,,2020-12-01 20:24:31,2020-12-01 20:24:36,4.732s,PASSED
+"click(findTestObject(""Page_SG Basketball - Login/EMAIL_LOGIN""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:36,2020-12-01 20:24:36,0.670s,PASSED
+"setText(findTestObject(""Page_SG Basketball - Login/EMAIL_LOGIN""), ""info@sgbasketball.com"")",Chrome 85.0.4183.83,,,2020-12-01 20:24:36,2020-12-01 20:24:37,0.659s,PASSED
+"click(findTestObject(""Page_SG Basketball - Login/PASSWORD_LOGIN""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:37,2020-12-01 20:24:37,0.337s,PASSED
+"setText(findTestObject(""Page_SG Basketball - Login/PASSWORD_LOGIN""), ""12345"")",Chrome 85.0.4183.83,,,2020-12-01 20:24:37,2020-12-01 20:24:38,0.597s,PASSED
+"click(findTestObject(""Page_SG Basketball - Login/button_Login""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:38,2020-12-01 20:24:38,0.319s,PASSED
+delay(2),Chrome 85.0.4183.83,,,2020-12-01 20:24:38,2020-12-01 20:24:40,2.010s,PASSED
+"click(findTestObject(""Page_Dashboard  SG Basketball/Court""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:40,2020-12-01 20:24:41,0.331s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/Block""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:41,2020-12-01 20:24:43,2.030s,PASSED
+delay(2),Chrome 85.0.4183.83,,,2020-12-01 20:24:43,2020-12-01 20:24:45,2.003s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_KBRC_1                                                (30.00)""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:45,2020-12-01 20:24:45,0.293s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_KBRC_2                                                (30.00)""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:45,2020-12-01 20:24:45,0.300s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_KBRC_3                                                (30.00)""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:45,2020-12-01 20:24:45,0.290s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_KBRC_4                                                (30.00)""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:45,2020-12-01 20:24:46,0.294s,PASSED
+"selectOptionByValue(findTestObject(""Object Repository/Page_Court  SG Basketball/select_Kaki Bukit Recreation Centre (KBRC)T_cda951""), ""string:2"", true)",Chrome 85.0.4183.83,,,2020-12-01 20:24:46,2020-12-01 20:24:47,0.841s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_Court_1                                                (40.00)""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:47,2020-12-01 20:24:48,1.677s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_Court_2                                                (40.00)""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:48,2020-12-01 20:24:49,0.607s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_Court_3                                                (40.00)""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:49,2020-12-01 20:24:49,0.294s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_Court_4                                                (40.00)""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:49,2020-12-01 20:24:49,0.288s,PASSED
+"selectOptionByValue(findTestObject(""Object Repository/Page_Court  SG Basketball/select_Kaki Bukit Recreation Centre (KBRC)T_cda951""), ""string:3"", true)",Chrome 85.0.4183.83,,,2020-12-01 20:24:49,2020-12-01 20:24:50,0.785s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_Full Court_1                                                (150.00)""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:50,2020-12-01 20:24:52,1.678s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_Full Court_2                                                (150.00)""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:52,2020-12-01 20:24:52,0.313s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/Block_button""), STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-01 20:24:52,2020-12-01 20:24:53,0.358s,PASSED
+"setText(findTestObject(""Page_Court  SG Basketball/Comment_block""), ""admin"")",Chrome 85.0.4183.83,,,2020-12-01 20:24:53,2020-12-01 20:24:54,0.900s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/button_Yes""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:54,2020-12-01 20:24:54,0.314s,PASSED
+"verifyElementText(findTestObject(""Page_Court  SG Basketball/div_Successful""), ""Successful"")",Chrome 85.0.4183.83,,,2020-12-01 20:24:54,2020-12-01 20:24:55,1.440s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/button_""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:55,2020-12-01 20:24:56,0.302s,PASSED
+"click(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/a_Booking""))",Chrome 85.0.4183.83,,,2020-12-01 20:24:56,2020-12-01 20:24:57,1.691s,PASSED
+delay(2),Chrome 85.0.4183.83,,,2020-12-01 20:24:57,2020-12-01 20:24:59,2.003s,PASSED
+"selectOptionByValue(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/Page_Court  SG Basketball/select_Kaki Bukit Recreation Centre (KBRC)T_cda951""), ""string:1"", false)",Chrome 85.0.4183.83,,,2020-12-01 20:24:59,2020-12-01 20:25:00,0.546s,PASSED
+"getText(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_32.10_1""), STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-01 20:25:00,2020-12-01 20:25:01,1.632s,PASSED
+"getText(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_32.10_2""), STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-01 20:25:01,2020-12-01 20:25:02,0.270s,PASSED
+"getText(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_32.10_4""), STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-01 20:25:02,2020-12-01 20:25:02,0.264s,PASSED
+"selectOptionByValue(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/Page_Court  SG Basketball/select_Kaki Bukit Recreation Centre (KBRC)T_cda951""), ""string:2"", false)",Chrome 85.0.4183.83,,,2020-12-01 20:25:02,2020-12-01 20:25:03,0.536s,PASSED
+"getText(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_42.80_1""), STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-01 20:25:03,2020-12-01 20:25:04,1.754s,PASSED
+"getText(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_42.80_2""), STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-01 20:25:04,2020-12-01 20:25:05,0.260s,PASSED
+"getText(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_42.80_3""), STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-01 20:25:05,2020-12-01 20:25:05,0.274s,PASSED
+"getText(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_42.80_4""), STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-01 20:25:05,2020-12-01 20:25:05,0.268s,PASSED
+"selectOptionByValue(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/Page_Court  SG Basketball/select_Kaki Bukit Recreation Centre (KBRC)T_cda951""), ""string:3"", false)",Chrome 85.0.4183.83,,,2020-12-01 20:25:05,2020-12-01 20:25:06,0.537s,PASSED
+"getText(findTestObject(""Page_Court  SG Basketball/SGB_135_Test/Page_Court  SG Basketball/td_160.50_1""), STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-01 20:25:06,2020-12-01 20:25:08,1.939s,PASSED
+closeBrowser(),Chrome 85.0.4183.83,,,2020-12-01 20:25:08,2020-12-01 20:25:08,0.616s,PASSED
+,,,,,,,
+Test Cases/SGB-134/SGB_134_2,Chrome 85.0.4183.83,,,2020-12-01 20:25:08,2020-12-01 20:25:49,40.437s,ERROR
+"callTestCase(findTestCase(""Framework/RunBAT/ionic_serve""), [""path"":""D:/Dev/ezactivevn/sgb""], STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-01 20:25:08,2020-12-01 20:25:49,40.116s,PASSED
+"callTestCase(findTestCase(""Retore_Booking_DB""), [:], OPTIONAL)",Chrome 85.0.4183.83,,,2020-12-01 20:25:49,2020-12-01 20:25:49,0.000s,PASSED

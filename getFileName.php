@@ -93,9 +93,9 @@ function callGetFileName()
 function callGetSuiteFolder()
 {
     $getSuiteFolder = new GetAllFileName();
-    $getSuiteFolder->setBatchFileDirectory("C:\\dev\\KatalonCMD\\bat\\getSuiteFolder.bat");
-    $getSuiteFolder->setKatalonDirectory("C:\\test\\ezactivevn\\VF_TestCase");
-    $getSuiteFolder->setTextFileDirectory("C:\\dev\\KatalonCMD\\suiteFolder.txt");
+    $getSuiteFolder->setBatchFileDirectory("D:\\dev\\KatalonCMD\\bat\\getSuiteFolder.bat");
+    $getSuiteFolder->setKatalonDirectory("D:\\TestCase\\VF_TestCase");
+    $getSuiteFolder->setTextFileDirectory("D:\\dev\\KatalonCMD\\suiteFolder.txt");
     $getSuiteFolder->getTestSuiteFolder();
     $getSuiteFolder->writeToTextFile();
 }
@@ -104,11 +104,11 @@ function callGetSuiteFolder()
 function callGetSuiteName($suiteFolder)
 {
     $getSuiteName = new GetAllFileName();
-    $getSuiteName->setBatchFileDirectory("C:\\dev\\KatalonCMD\\bat\\getSuiteName.bat");
-    $getSuiteName->setKatalonDirectory("C:\\test\\ezactivevn\\VF_TestCase");
+    $getSuiteName->setBatchFileDirectory("D:\\dev\\KatalonCMD\\bat\\getSuiteName.bat");
+    $getSuiteName->setKatalonDirectory("D:\\TestCase\\VF_TestCase");
     $getSuiteName->setSuiteFolder($suiteFolder);
     $getSuiteName->setFileExtension("*.ts");
-    $getSuiteName->setTextFileDirectory("C:\\dev\\KatalonCMD\\suiteName.txt");
+    $getSuiteName->setTextFileDirectory("D:\\dev\\KatalonCMD\\suiteName.txt");
     $getSuiteName->getTestSuiteName();
     $getSuiteName->writeToTextFile();
 }
@@ -121,20 +121,22 @@ function findStringInTextFile($search, $file)
         $line = trim($line);
         if ($line == $search) {
 
-            echo $search . " is in the file.txt";
-            break;
+            // echo $search . " is in the file.txt";
+            return $search;
         } else {
-            echo $search . " not in the file";
-            break;
+
+            // echo $search . " not in the file";
+            return  $search . " not a test suite";
         }
     }
 }
 
+
+
 // callGetFileName(); //echo project Katalon .prj name
 
-callGetSuiteFolder(); //echo suite folder name
+// callGetSuiteFolder(); //echo suite folder name
 
-findStringInTextFile("VF-12891237", "suiteFolder.txt");
-
+echo findStringInTextFile("VF-166", "suiteFolder.txt");
 
 // callGetSuiteName("VF-166"); // echo test suite file name

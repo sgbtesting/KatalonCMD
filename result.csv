@@ -1,0 +1,245 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+RunTestAll,Chrome 85.0.4183.83,,,2020-12-07 11:08:59,2020-12-07 11:20:31,11m - 32.680s,FAILED
+,,,,,,,
+Test Cases/JFL-135/JFL_135_CheckNameIsDuplicate,Chrome 85.0.4183.83,,,2020-12-07 11:08:59,2020-12-07 11:09:09,10.220s,PASSED
+try,Chrome 85.0.4183.83,,,2020-12-07 11:08:59,2020-12-07 11:09:09,9.819s,PASSED
+,,,,,,,
+Test Cases/JFL-136/HKJFL_136_CheckPaymentIsDuplicate,Chrome 85.0.4183.83,,,2020-12-07 11:09:09,2020-12-07 11:09:19,9.571s,PASSED
+"openBrowser("""")",Chrome 85.0.4183.83,,,2020-12-07 11:09:09,2020-12-07 11:09:13,4.024s,PASSED
+driver = getWebDriver(),Chrome 85.0.4183.83,,,2020-12-07 11:09:13,2020-12-07 11:09:13,0.001s,PASSED
+"navigateToUrl(""http://localhost/ezactivevn/hkjfl/admin/login.html"")",Chrome 85.0.4183.83,,,2020-12-07 11:09:13,2020-12-07 11:09:14,0.241s,PASSED
+"setText(findTestObject(""Object Repository/HKJFL_136/Page_HKJFL - Login/input_Sign up_email""), email)",Chrome 85.0.4183.83,,,2020-12-07 11:09:14,2020-12-07 11:09:15,0.835s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/HKJFL_136/Page_HKJFL - Login/input_Sign up_password""), password)",Chrome 85.0.4183.83,,,2020-12-07 11:09:15,2020-12-07 11:09:15,0.366s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_136/Page_HKJFL - Login/button_Login""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:15,2020-12-07 11:09:15,0.317s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_136/Page_Dashboard  Hong Kong Junior Football League/a_Payments""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:15,2020-12-07 11:09:16,1.032s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_136/Page_Dashboard  Hong Kong Junior Football League/a_2019-2020""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:16,2020-12-07 11:09:17,0.701s,PASSED
+"com.database.DemoMySql.connectDB(""localhost"", dbName, ""3306"", ""root"", """")",Chrome 85.0.4183.83,,,2020-12-07 11:09:17,2020-12-07 11:09:17,0.006s,PASSED
+"rs = com.database.DemoMySql.executeQuery(""SELECT id FROM users WHERE username='wilfred@ezactive.com'"")",Chrome 85.0.4183.83,,,2020-12-07 11:09:17,2020-12-07 11:09:17,0.003s,PASSED
+"x = """"",Chrome 85.0.4183.83,,,2020-12-07 11:09:17,2020-12-07 11:09:17,0.001s,PASSED
+while (rs.next()),Chrome 85.0.4183.83,,,2020-12-07 11:09:17,2020-12-07 11:09:17,0.001s,PASSED
+"rs1 = com.database.DemoMySql.executeQuery(""SELECT clubs.id, clubs.name ,users.id FROM clubs JOIN club_managers ON clubs.id=club_managers.club_id JOIN parens ON parens.id=club_managers.manager_id AND type='Club Manager' JOIN users ON parens.id=users.person_id WHERE users.id="" + x)",Chrome 85.0.4183.83,,,2020-12-07 11:09:17,2020-12-07 11:09:17,0.002s,PASSED
+while (rs1.next()),Chrome 85.0.4183.83,,,2020-12-07 11:09:17,2020-12-07 11:09:17,0.002s,PASSED
+"s = ""SELECT * FROM( SELECT CONCAT(players.other_name,' ',players.surname)as name,players.id,club_players.club_id FROM club_players JOIN players ON players.id=club_players.player_id JOIN registrations on registrations.player_id=players.id WHERE (registrations.event_id=2) INTERSECT  (SELECT CONCAT(players.other_name,' ',players.surname)as name,players.id,club_players.club_id FROM club_players JOIN players ON players.id=club_players.player_id JOIN registrations on registrations.player_id=players.id WHERE (registrations.event_id=1)))a WHERE a.club_id in (SELECT id from clubs WHERE name='"" + x + ""')""",Chrome 85.0.4183.83,,,2020-12-07 11:09:17,2020-12-07 11:09:17,0.001s,PASSED
+rs = com.database.DemoMySql.executeQuery(s.toString()),Chrome 85.0.4183.83,,,2020-12-07 11:09:17,2020-12-07 11:09:17,0.051s,PASSED
+"x = """"",Chrome 85.0.4183.83,,,2020-12-07 11:09:17,2020-12-07 11:09:17,0.000s,PASSED
+while (rs.next()),Chrome 85.0.4183.83,,,2020-12-07 11:09:17,2020-12-07 11:09:17,0.003s,PASSED
+com.database.DemoMySql.closeDatabaseConnection(),Chrome 85.0.4183.83,,,2020-12-07 11:09:17,2020-12-07 11:09:17,0.001s,PASSED
+"if (x != """")",Chrome 85.0.4183.83,,,2020-12-07 11:09:17,2020-12-07 11:09:19,1.765s,PASSED
+,,,,,,,
+Test Cases/JFL-144/JFL-144_Main,Chrome 85.0.4183.83,,,2020-12-07 11:09:19,2020-12-07 11:09:44,25.034s,PASSED
+"openBrowser("""")",Chrome 85.0.4183.83,,,2020-12-07 11:09:19,2020-12-07 11:09:23,3.745s,PASSED
+"navigateToUrl(""http://localhost/ezactivevn/hkjfl/admin/login.html"")",Chrome 85.0.4183.83,,,2020-12-07 11:09:23,2020-12-07 11:09:23,0.239s,PASSED
+login(),Chrome 85.0.4183.83,,,2020-12-07 11:09:23,2020-12-07 11:09:23,0.001s,PASSED
+"setText(findTestObject(""Object Repository/HKJFL-144/input_Sign up_email""), qadrangle)",Chrome 85.0.4183.83,,,2020-12-07 11:09:23,2020-12-07 11:09:24,0.834s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/HKJFL-144/input_Sign up_password""), password)",Chrome 85.0.4183.83,,,2020-12-07 11:09:24,2020-12-07 11:09:24,0.362s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_Login""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:24,2020-12-07 11:09:25,0.320s,PASSED
+selectPlayer(teamNumber),Chrome 85.0.4183.83,,,2020-12-07 11:09:25,2020-12-07 11:09:25,0.002s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/i_Year Groups_fa fa-angle-right drop-icon""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:25,2020-12-07 11:09:26,1.093s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/a_2020-2021""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:26,2020-12-07 11:09:26,0.538s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_Select""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:26,2020-12-07 11:09:27,0.654s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/input_Search_dt-checkboxes""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:27,2020-12-07 11:09:27,0.622s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_Actions""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:27,2020-12-07 11:09:28,0.527s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/a_Assign player to Team""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:28,2020-12-07 11:09:28,0.541s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_OK""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:28,2020-12-07 11:09:30,1.016s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/span_Select a team_select2-selection__arrow""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:30,2020-12-07 11:09:30,0.848s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/li_HKFC"" + number))",Chrome 85.0.4183.83,,,2020-12-07 11:09:30,2020-12-07 11:09:31,0.524s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_Submit""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:31,2020-12-07 11:09:31,0.556s,PASSED
+"verifyElementPresent(findTestObject(""Object Repository/HKJFL-144/div_Information - Assign player to Team""), 0)",Chrome 85.0.4183.83,,,2020-12-07 11:09:31,2020-12-07 11:09:32,0.818s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:32,2020-12-07 11:09:33,0.309s,PASSED
+selectTeamAndSubmit(teamNumber),Chrome 85.0.4183.83,,,2020-12-07 11:09:33,2020-12-07 11:09:33,0.001s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/a_Teams""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:33,2020-12-07 11:09:33,0.316s,PASSED
+"click(findTestObject(""HKJFL-144/td_HKFC"" + number + ""_details""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:33,2020-12-07 11:09:33,0.544s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_Actions2""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:33,2020-12-07 11:09:34,0.548s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/a_Submit Team Sheet""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:34,2020-12-07 11:09:35,0.535s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_OK_1""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:35,2020-12-07 11:09:43,8.716s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:43,2020-12-07 11:09:44,0.620s,PASSED
+,,,,,,,
+Test Cases/JFL-148/JFL-148_DeleteAllPlayerTest,Chrome 85.0.4183.83,,,2020-12-07 11:09:44,2020-12-07 11:09:56,12.242s,PASSED
+"openBrowser("""")",Chrome 85.0.4183.83,,,2020-12-07 11:09:44,2020-12-07 11:09:48,3.729s,PASSED
+"navigateToUrl(""http://localhost/ezactivevn/hkjfl/admin/login.html"")",Chrome 85.0.4183.83,,,2020-12-07 11:09:48,2020-12-07 11:09:48,0.242s,PASSED
+login(),Chrome 85.0.4183.83,,,2020-12-07 11:09:48,2020-12-07 11:09:48,0.001s,PASSED
+"setText(findTestObject(""Object Repository/HKJFL-144/input_Sign up_email""), email)",Chrome 85.0.4183.83,,,2020-12-07 11:09:48,2020-12-07 11:09:49,0.827s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/HKJFL-144/input_Sign up_password""), password)",Chrome 85.0.4183.83,,,2020-12-07 11:09:49,2020-12-07 11:09:49,0.359s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_Login""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:49,2020-12-07 11:09:49,0.314s,PASSED
+selectPlayer(teamNumber),Chrome 85.0.4183.83,,,2020-12-07 11:09:49,2020-12-07 11:09:49,0.002s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/i_Year Groups_fa fa-angle-right drop-icon""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:49,2020-12-07 11:09:51,1.062s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/a_2020-2021""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:51,2020-12-07 11:09:51,0.525s,PASSED
+"click(findTestObject(""HKJFL-148/dropDownArrow""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:51,2020-12-07 11:09:52,0.585s,PASSED
+"click(findTestObject(""HKJFL-148/li_U10 Boys""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:52,2020-12-07 11:09:52,0.534s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_Select""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:52,2020-12-07 11:09:53,0.596s,PASSED
+selectTeamAndSubmit(teamNumber),Chrome 85.0.4183.83,,,2020-12-07 11:09:53,2020-12-07 11:09:53,0.002s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/a_Teams""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:53,2020-12-07 11:09:53,0.602s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/td_HKFC"" + number + ""_details""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:53,2020-12-07 11:09:54,0.549s,PASSED
+deleteList(),Chrome 85.0.4183.83,,,2020-12-07 11:09:54,2020-12-07 11:09:54,0.001s,PASSED
+driver = getWebDriver(),Chrome 85.0.4183.83,,,2020-12-07 11:09:54,2020-12-07 11:09:54,0.000s,PASSED
+builder = new org.openqa.selenium.interactions.Actions(driver),Chrome 85.0.4183.83,,,2020-12-07 11:09:54,2020-12-07 11:09:54,0.006s,PASSED
+"firstRow = findWebElement(findTestObject(""Object Repository/HKJFL-144/td_Charlie Richley""), 30)",Chrome 85.0.4183.83,,,2020-12-07 11:09:54,2020-12-07 11:09:54,0.501s,PASSED
+"lastRow = findWebElement(findTestObject(""Object Repository/HKJFL-144/td_Xavier Jackson""), 30)",Chrome 85.0.4183.83,,,2020-12-07 11:09:54,2020-12-07 11:09:55,0.264s,PASSED
+build().perform(),Chrome 85.0.4183.83,,,2020-12-07 11:09:55,2020-12-07 11:09:55,0.268s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_Delete""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:55,2020-12-07 11:09:55,0.526s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_DeleteInside""))",Chrome 85.0.4183.83,,,2020-12-07 11:09:55,2020-12-07 11:09:56,0.621s,PASSED
+,,,,,,,
+Test Cases/JFL-148/JFL-148,Chrome 85.0.4183.83,,,2020-12-07 11:09:56,2020-12-07 11:10:20,23.514s,PASSED
+"openBrowser("""")",Chrome 85.0.4183.83,,,2020-12-07 11:09:56,2020-12-07 11:10:00,3.746s,PASSED
+"navigateToUrl(""http://localhost/ezactivevn/hkjfl/admin/login.html"")",Chrome 85.0.4183.83,,,2020-12-07 11:10:00,2020-12-07 11:10:00,0.254s,PASSED
+login(),Chrome 85.0.4183.83,,,2020-12-07 11:10:00,2020-12-07 11:10:00,0.001s,PASSED
+"setText(findTestObject(""Object Repository/HKJFL-144/input_Sign up_email""), email)",Chrome 85.0.4183.83,,,2020-12-07 11:10:00,2020-12-07 11:10:01,0.833s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/HKJFL-144/input_Sign up_password""), ""iGDxf8hSRT4="")",Chrome 85.0.4183.83,,,2020-12-07 11:10:01,2020-12-07 11:10:01,0.370s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_Login""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:01,2020-12-07 11:10:02,0.321s,PASSED
+selectPlayer(teamNumber),Chrome 85.0.4183.83,,,2020-12-07 11:10:02,2020-12-07 11:10:02,0.001s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/i_Year Groups_fa fa-angle-right drop-icon""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:02,2020-12-07 11:10:03,0.986s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/a_2020-2021""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:03,2020-12-07 11:10:03,0.527s,PASSED
+"click(findTestObject(""HKJFL-148/dropDownArrow""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:03,2020-12-07 11:10:04,0.578s,PASSED
+"click(findTestObject(""HKJFL-148/li_U10 Boys""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:04,2020-12-07 11:10:04,0.521s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_Select""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:04,2020-12-07 11:10:05,0.575s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-148/ListTeam"" + number))",Chrome 85.0.4183.83,,,2020-12-07 11:10:05,2020-12-07 11:10:06,0.585s,PASSED
+"name1 = getText(findTestObject(""Object Repository/HKJFL-148/player/td_player_1""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:06,2020-12-07 11:10:06,0.282s,PASSED
+"name2 = getText(findTestObject(""Object Repository/HKJFL-148/player/td_player_2""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:06,2020-12-07 11:10:06,0.272s,PASSED
+"name3 = getText(findTestObject(""Object Repository/HKJFL-148/player/td_player_3""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:06,2020-12-07 11:10:06,0.280s,PASSED
+"name4 = getText(findTestObject(""Object Repository/HKJFL-148/player/td_player_4""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:06,2020-12-07 11:10:07,0.282s,PASSED
+"name5 = getText(findTestObject(""Object Repository/HKJFL-148/player/td_player_5""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:07,2020-12-07 11:10:07,0.280s,PASSED
+"name6 = getText(findTestObject(""Object Repository/HKJFL-148/player/td_player_6""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:07,2020-12-07 11:10:07,0.274s,PASSED
+"name7 = getText(findTestObject(""Object Repository/HKJFL-148/player/td_player_7""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:07,2020-12-07 11:10:08,0.284s,PASSED
+"name8 = getText(findTestObject(""Object Repository/HKJFL-148/player/td_player_8""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:08,2020-12-07 11:10:08,0.278s,PASSED
+"name9 = getText(findTestObject(""Object Repository/HKJFL-148/player/td_player_9""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:08,2020-12-07 11:10:08,0.280s,PASSED
+"name10 = getText(findTestObject(""Object Repository/HKJFL-148/player/td_player_10""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:08,2020-12-07 11:10:08,0.288s,PASSED
+selectList(),Chrome 85.0.4183.83,,,2020-12-07 11:10:08,2020-12-07 11:10:08,0.000s,PASSED
+driver = getWebDriver(),Chrome 85.0.4183.83,,,2020-12-07 11:10:08,2020-12-07 11:10:08,0.001s,PASSED
+builder = new org.openqa.selenium.interactions.Actions(driver),Chrome 85.0.4183.83,,,2020-12-07 11:10:08,2020-12-07 11:10:08,0.000s,PASSED
+"firstRow = findWebElement(findTestObject(""Object Repository/HKJFL-148/player/td_player_1""), 30)",Chrome 85.0.4183.83,,,2020-12-07 11:10:08,2020-12-07 11:10:09,0.258s,PASSED
+"lastRow = findWebElement(findTestObject(""Object Repository/HKJFL-148/player/td_player_10""), 30)",Chrome 85.0.4183.83,,,2020-12-07 11:10:09,2020-12-07 11:10:09,0.260s,PASSED
+build().perform(),Chrome 85.0.4183.83,,,2020-12-07 11:10:09,2020-12-07 11:10:09,0.266s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_Actions""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:09,2020-12-07 11:10:10,0.521s,PASSED
+"click(findTestObject(""HKJFL-148/a_Assign player to Team""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:10,2020-12-07 11:10:10,0.536s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_OK""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:10,2020-12-07 11:10:11,0.984s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/span_Select a team_select2-selection__arrow""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:11,2020-12-07 11:10:12,0.834s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/li_HKFC"" + number))",Chrome 85.0.4183.83,,,2020-12-07 11:10:12,2020-12-07 11:10:13,0.510s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_Submit""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:13,2020-12-07 11:10:13,0.556s,PASSED
+"verifyElementPresent(findTestObject(""Object Repository/HKJFL-144/div_Information - Assign player to Team""), 0)",Chrome 85.0.4183.83,,,2020-12-07 11:10:13,2020-12-07 11:10:14,0.833s,PASSED
+"plusName = [name1, name2, name3, name4, name5, name6, name7, name8, name9, name10]",Chrome 85.0.4183.83,,,2020-12-07 11:10:14,2020-12-07 11:10:14,0.000s,PASSED
+compareName(plusName),Chrome 85.0.4183.83,,,2020-12-07 11:10:14,2020-12-07 11:10:14,0.000s,PASSED
+"allName = """"",Chrome 85.0.4183.83,,,2020-12-07 11:10:14,2020-12-07 11:10:14,0.000s,PASSED
+"objFound = findTestObject(""HKJFL-148/alert_Area"")",Chrome 85.0.4183.83,,,2020-12-07 11:10:14,2020-12-07 11:10:14,0.028s,PASSED
+"if (verifyElementPresent(objFound, 5, OPTIONAL) == true)",Chrome 85.0.4183.83,,,2020-12-07 11:10:14,2020-12-07 11:10:14,0.500s,PASSED
+count = 0,Chrome 85.0.4183.83,,,2020-12-07 11:10:14,2020-12-07 11:10:14,0.000s,PASSED
+"for ([i = 0, i < length, (i++)])",Chrome 85.0.4183.83,,,2020-12-07 11:10:14,2020-12-07 11:10:15,0.151s,PASSED
+if (count == length),Chrome 85.0.4183.83,,,2020-12-07 11:10:15,2020-12-07 11:10:19,4.036s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/button_""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:19,2020-12-07 11:10:19,0.090s,PASSED
+selectTeamAndSubmit(teamNumber),Chrome 85.0.4183.83,,,2020-12-07 11:10:19,2020-12-07 11:10:19,0.001s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/a_Teams""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:19,2020-12-07 11:10:19,0.328s,PASSED
+"click(findTestObject(""Object Repository/HKJFL-144/td_HKFC"" + number + ""_details""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:19,2020-12-07 11:10:20,0.538s,PASSED
+,,,,,,,
+Test Cases/JFL-152/JFL-152_AdminCanLogin,Chrome 85.0.4183.83,,,2020-12-07 11:10:20,2020-12-07 11:10:29,9.653s,PASSED
+"openBrowser("""")",Chrome 85.0.4183.83,,,2020-12-07 11:10:20,2020-12-07 11:10:23,3.757s,PASSED
+"navigateToUrl(""http://localhost/ezactivevn/hkjfl/admin/login.html"")",Chrome 85.0.4183.83,,,2020-12-07 11:10:23,2020-12-07 11:10:24,0.252s,PASSED
+"setText(findTestObject(""Object Repository/JFL-152/Page_HKJFL - Login/input_Sign up_email""), ""hkjfl@ezactive.com"")",Chrome 85.0.4183.83,,,2020-12-07 11:10:24,2020-12-07 11:10:25,0.822s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/JFL-152/Page_HKJFL - Login/input_Sign up_password""), ""iGDxf8hSRT4="")",Chrome 85.0.4183.83,,,2020-12-07 11:10:25,2020-12-07 11:10:25,0.367s,PASSED
+"click(findTestObject(""Object Repository/JFL-152/Page_HKJFL - Login/button_Login""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:25,2020-12-07 11:10:25,0.318s,PASSED
+"click(findTestObject(""Object Repository/JFL-152/Page_Dashboard/TeamSheet""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:25,2020-12-07 11:10:26,0.987s,PASSED
+"click(findTestObject(""Object Repository/JFL-152/Page_Dashboard/a_2019-2020""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:26,2020-12-07 11:10:27,0.534s,PASSED
+"click(findTestObject(""Object Repository/JFL-152/Page_Team Sheet/span_U7 Boys_select2-selection__arrow""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:27,2020-12-07 11:10:27,0.570s,PASSED
+"takeFullPageScreenshot(""C:\test\result\152.png"")",Chrome 85.0.4183.83,,,2020-12-07 11:10:27,2020-12-07 11:10:29,1.983s,PASSED
+,,,,,,,
+Test Cases/JFL-152/JFL-152_ClientTestSortGroup_TestCaseNotUseful,Chrome 85.0.4183.83,,,2020-12-07 11:10:29,2020-12-07 11:11:13,44.132s,FAILED
+"openBrowser("""")",Chrome 85.0.4183.83,,,2020-12-07 11:10:29,2020-12-07 11:10:33,3.742s,PASSED
+"navigateToUrl(""http://localhost:8102"")",Chrome 85.0.4183.83,,,2020-12-07 11:10:33,2020-12-07 11:10:34,1.146s,PASSED
+"setText(findTestObject(""Object Repository/JFL-152/ClientApp/WebApp/Page_Ionic App/inputEmail_client""), ""hkjfl@ezactive.com"")",Chrome 85.0.4183.83,,,2020-12-07 11:10:34,2020-12-07 11:10:36,1.382s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/JFL-152/ClientApp/WebApp/Page_Ionic App/inputPass_client""), ""iGDxf8hSRT4="")",Chrome 85.0.4183.83,,,2020-12-07 11:10:36,2020-12-07 11:10:36,0.351s,PASSED
+"click(findTestObject(""Object Repository/JFL-152/ClientApp/WebApp/Page_Ionic App/ion-button_Log In""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:36,2020-12-07 11:10:37,0.527s,PASSED
+"click(findTestObject(""Object Repository/JFL-152/ClientApp/WebApp/Page_Ionic App/Page_Ionic App/ion-label_Team sheet""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:37,2020-12-07 11:10:38,1.375s,PASSED
+"click(findTestObject(""Object Repository/JFL-152/ClientApp/WebApp/Page_Ionic App/Page_Ionic App/ion-button_Select""))",Chrome 85.0.4183.83,,,2020-12-07 11:10:38,2020-12-07 11:11:13,35.478s,FAILED
+,,,,,,,
+Test Cases/JFL-154/JFL-154_Admin_SeeTeamsheetForYearGroupInWebOrApp,Chrome 85.0.4183.83,,,2020-12-07 11:11:13,2020-12-07 11:11:24,10.945s,PASSED
+"openBrowser("""")",Chrome 85.0.4183.83,"Mo trinh duyet
+",,2020-12-07 11:11:14,2020-12-07 11:11:17,3.749s,PASSED
+driver = getWebDriver(),Chrome 85.0.4183.83,cap nhat driver,,2020-12-07 11:11:17,2020-12-07 11:11:17,0.000s,PASSED
+"navigateToUrl(""http://localhost/ezactivevn/hkjfl/admin/login.html"")",Chrome 85.0.4183.83,"dieu huong trinh duyet
+",,2020-12-07 11:11:17,2020-12-07 11:11:18,0.245s,PASSED
+"takeScreenshot(""./admin.png"")",Chrome 85.0.4183.83,chup man hinh,,2020-12-07 11:11:18,2020-12-07 11:11:18,0.812s,PASSED
+"setText(findTestObject(""Object Repository/HKJFL_154_ADMIN/Page_HKJFL - Login/input_Sign up_email""), email)",Chrome 85.0.4183.83,,,2020-12-07 11:11:18,2020-12-07 11:11:19,0.577s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/HKJFL_154_ADMIN/Page_HKJFL - Login/input_Sign up_password""), password)",Chrome 85.0.4183.83,,,2020-12-07 11:11:19,2020-12-07 11:11:19,0.370s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_154_ADMIN/Page_HKJFL - Login/button_Login""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:19,2020-12-07 11:11:20,0.318s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_154_ADMIN/Page_Dashboard  Hong Kong Junior Football League/a_Team sheet""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:20,2020-12-07 11:11:21,1.007s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_154_ADMIN/Page_Dashboard  Hong Kong Junior Football League/a_2020-2021""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:21,2020-12-07 11:11:21,0.533s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_154_ADMIN/Page_Team Sheet  Hong Kong Junior Football League/span_U7 Boys""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:21,2020-12-07 11:11:22,0.569s,PASSED
+"setText(findTestObject(""Object Repository/HKJFL_154_ADMIN/Page_Team Sheet  Hong Kong Junior Football League/input_concat(id(, , select2-sel2-container,_b430b6""), ""U10"")",Chrome 85.0.4183.83,,,2020-12-07 11:11:22,2020-12-07 11:11:23,0.784s,PASSED
+"sendKeys(findTestObject(""Object Repository/HKJFL_154_ADMIN/Page_Team Sheet  Hong Kong Junior Football League/input_concat(id(, , select2-sel2-container,_b430b6""), Keys.chord(ENTER))",Chrome 85.0.4183.83,,,2020-12-07 11:11:23,2020-12-07 11:11:23,0.503s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_154_ADMIN/Page_Team Sheet  Hong Kong Junior Football League/button_Select""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:23,2020-12-07 11:11:24,0.545s,PASSED
+"com.database.DemoMySql.connectDB(""localhost"", dbName, ""3306"", ""root"", """")",Chrome 85.0.4183.83,,,2020-12-07 11:11:24,2020-12-07 11:11:24,0.005s,PASSED
+"rs = com.database.DemoMySql.executeQuery(""SELECT * FROM groups WHERE (event_id=2)AND(`name` LIKE 'U10 Boys') ORDER BY groups.type DESC, groups.year DESC, groups.name DESC"")",Chrome 85.0.4183.83,,,2020-12-07 11:11:24,2020-12-07 11:11:24,0.001s,PASSED
+"x = """"",Chrome 85.0.4183.83,,,2020-12-07 11:11:24,2020-12-07 11:11:24,0.001s,PASSED
+while (rs.next()),Chrome 85.0.4183.83,,,2020-12-07 11:11:24,2020-12-07 11:11:24,0.001s,PASSED
+"rs = com.database.DemoMySql.executeQuery(""SELECT COUNT(DISTINCT(team_sheet.team_id)) as 'count' FROM team_sheet LEFT JOIN teams ON team_sheet.team_id = teams.id LEFT JOIN cgroups ON teams.cgroup_id = cgroups.id LEFT JOIN clubs ON cgroups.club_id = clubs.id LEFT JOIN groups ON cgroups.group_id = groups.id WHERE cgroups.group_id = "" + x + "" ORDER BY team_id ASC"")",Chrome 85.0.4183.83,,,2020-12-07 11:11:24,2020-12-07 11:11:24,0.002s,PASSED
+while (rs.next()),Chrome 85.0.4183.83,,,2020-12-07 11:11:24,2020-12-07 11:11:24,0.003s,PASSED
+"Table = driver.findElement(By.xpath(""//table/tbody""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:24,2020-12-07 11:11:24,0.486s,PASSED
+"rows_table = Table.findElements(By.tagName(""tr""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:24,2020-12-07 11:11:24,0.234s,PASSED
+rows_count = rows_table.size(),Chrome 85.0.4183.83,,,2020-12-07 11:11:24,2020-12-07 11:11:24,0.000s,PASSED
+println(rows_count),Chrome 85.0.4183.83,,,2020-12-07 11:11:24,2020-12-07 11:11:24,0.001s,PASSED
+if (rows_count == java.lang.Integer == 1),Chrome 85.0.4183.83,,,2020-12-07 11:11:24,2020-12-07 11:11:24,0.000s,PASSED
+com.database.DemoMySql.closeDatabaseConnection(),Chrome 85.0.4183.83,,,2020-12-07 11:11:24,2020-12-07 11:11:24,0.002s,PASSED
+,,,,,,,
+Test Cases/JFL-154/JFL-154_Client_SeeTeamsheetForYearGroupInWebOrApp,Chrome 85.0.4183.83,,,2020-12-07 11:11:24,2020-12-07 11:11:36,11.229s,PASSED
+try,Chrome 85.0.4183.83,,,2020-12-07 11:11:24,2020-12-07 11:11:36,11.144s,PASSED
+,,,,,,,
+Test Cases/JFL-154/JFL-154_ClubCoach_SeeTeamsheetForYearGroupInWebOrApp,Chrome 85.0.4183.83,,,2020-12-07 11:11:36,2020-12-07 11:11:44,8.620s,PASSED
+"openBrowser("""")",Chrome 85.0.4183.83,,,2020-12-07 11:11:36,2020-12-07 11:11:39,3.754s,PASSED
+driver = getWebDriver(),Chrome 85.0.4183.83,,,2020-12-07 11:11:39,2020-12-07 11:11:39,0.000s,PASSED
+"navigateToUrl(""http://localhost/ezactivevn/hkjfl/admin/login.html"")",Chrome 85.0.4183.83,,,2020-12-07 11:11:39,2020-12-07 11:11:40,0.253s,PASSED
+"setText(findTestObject(""Object Repository/HKJFL_154/Page_HKJFL - Login/input_Sign up_email""), email)",Chrome 85.0.4183.83,,,2020-12-07 11:11:40,2020-12-07 11:11:41,0.834s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/HKJFL_154/Page_HKJFL - Login/input_Sign up_password""), password)",Chrome 85.0.4183.83,,,2020-12-07 11:11:41,2020-12-07 11:11:41,0.350s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_154/Page_HKJFL - Login/button_Login""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:41,2020-12-07 11:11:41,0.315s,PASSED
+"com.database.DemoMySql.connectDB(""localhost"", dbName, ""3306"", ""root"", """")",Chrome 85.0.4183.83,,,2020-12-07 11:11:41,2020-12-07 11:11:41,0.004s,PASSED
+"rs = com.database.DemoMySql.executeQuery(""SELECT id FROM users WHERE username='wilfredwong@hkfcjuniorsoccer.com'"")",Chrome 85.0.4183.83,,,2020-12-07 11:11:41,2020-12-07 11:11:41,0.001s,PASSED
+"x = """"",Chrome 85.0.4183.83,,,2020-12-07 11:11:41,2020-12-07 11:11:41,0.001s,PASSED
+while (rs.next()),Chrome 85.0.4183.83,,,2020-12-07 11:11:41,2020-12-07 11:11:41,0.002s,PASSED
+println(x),Chrome 85.0.4183.83,,,2020-12-07 11:11:41,2020-12-07 11:11:41,0.001s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_test_object/Page_Dashboard  Hong Kong Junior Football League/span_Team sheet""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:41,2020-12-07 11:11:42,1.070s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_test_object/Page_Dashboard  Hong Kong Junior Football League/a_2020-2021""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:42,2020-12-07 11:11:43,0.522s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_test_object/Page_Team Sheet  Hong Kong Junior Football League/button_Select""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:43,2020-12-07 11:11:43,0.579s,PASSED
+"rs = com.database.DemoMySql.executeQuery(""SELECT COUNT(id) as id  FROM (SELECT DISTINCT teams.id as 'id' FROM `team_sheet` JOIN teams on teams.id=team_sheet.team_id JOIN cgroups on cgroups.id=teams.cgroup_id JOIN cgroup_coaches on cgroup_coaches.cgroup_id=cgroups.id JOIN users on users.person_id=cgroup_coaches.coach_id WHERE team_sheet.document like '%2020-2021%' and users.username='wilfredwong@hkfcjuniorsoccer.com')a"")",Chrome 85.0.4183.83,,,2020-12-07 11:11:43,2020-12-07 11:11:43,0.002s,PASSED
+number = 0,Chrome 85.0.4183.83,,,2020-12-07 11:11:43,2020-12-07 11:11:43,0.000s,PASSED
+while (rs.next()),Chrome 85.0.4183.83,,,2020-12-07 11:11:43,2020-12-07 11:11:43,0.001s,PASSED
+"Table = driver.findElement(By.xpath(""//table/tbody""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:43,2020-12-07 11:11:44,0.545s,PASSED
+"rows_table = Table.findElements(By.tagName(""tr""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:44,2020-12-07 11:11:44,0.236s,PASSED
+rows_count = rows_table.size(),Chrome 85.0.4183.83,,,2020-12-07 11:11:44,2020-12-07 11:11:44,0.000s,PASSED
+println(rows_count),Chrome 85.0.4183.83,,,2020-12-07 11:11:44,2020-12-07 11:11:44,0.001s,PASSED
+if (rows_count == number && number == 1),Chrome 85.0.4183.83,,,2020-12-07 11:11:44,2020-12-07 11:11:44,0.000s,PASSED
+com.database.DemoMySql.closeDatabaseConnection(),Chrome 85.0.4183.83,,,2020-12-07 11:11:44,2020-12-07 11:11:44,0.001s,PASSED
+,,,,,,,
+Test Cases/JFL-154/JFL-154_ClubManager_SeeTeamsheetForYearGroupInWebOrApp,Chrome 85.0.4183.83,,,2020-12-07 11:11:44,2020-12-07 11:11:55,10.670s,PASSED
+"openBrowser("""")",Chrome 85.0.4183.83,,,2020-12-07 11:11:44,2020-12-07 11:11:48,3.772s,PASSED
+driver = getWebDriver(),Chrome 85.0.4183.83,,,2020-12-07 11:11:48,2020-12-07 11:11:48,0.001s,PASSED
+"navigateToUrl(""http://localhost/ezactivevn/hkjfl/admin/login.html"")",Chrome 85.0.4183.83,,,2020-12-07 11:11:48,2020-12-07 11:11:48,0.241s,PASSED
+"setText(findTestObject(""Object Repository/HKJFL_154_Club_Manager/Page_HKJFL - Login/input_Sign up_email""), email)",Chrome 85.0.4183.83,,,2020-12-07 11:11:48,2020-12-07 11:11:49,0.814s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/HKJFL_154_Club_Manager/Page_HKJFL - Login/input_Sign up_password""), password)",Chrome 85.0.4183.83,,,2020-12-07 11:11:49,2020-12-07 11:11:50,0.355s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_154_Club_Manager/Page_HKJFL - Login/button_Login""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:50,2020-12-07 11:11:50,0.311s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_154_Club_Manager/Page_Dashboard  Hong Kong Junior Football League/a_Team sheet""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:50,2020-12-07 11:11:51,1.089s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_154_Club_Manager/Page_Dashboard  Hong Kong Junior Football League/a_2020-2021""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:51,2020-12-07 11:11:51,0.522s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_154_Club_Manager/Page_Team Sheet  Hong Kong Junior Football League/b""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:51,2020-12-07 11:11:52,0.567s,PASSED
+"com.database.DemoMySql.connectDB(""localhost"", dbName, ""3306"", ""root"", """")",Chrome 85.0.4183.83,,,2020-12-07 11:11:52,2020-12-07 11:11:52,0.005s,PASSED
+"rs = com.database.DemoMySql.executeQuery(""SELECT * FROM users WHERE username='info@hkfcjuniorsoccer.com'"")",Chrome 85.0.4183.83,,,2020-12-07 11:11:52,2020-12-07 11:11:52,0.002s,PASSED
+"x = """"",Chrome 85.0.4183.83,,,2020-12-07 11:11:52,2020-12-07 11:11:52,0.001s,PASSED
+person_id = 0,Chrome 85.0.4183.83,,,2020-12-07 11:11:52,2020-12-07 11:11:52,0.000s,PASSED
+while (rs.next()),Chrome 85.0.4183.83,,,2020-12-07 11:11:52,2020-12-07 11:11:52,0.000s,PASSED
+"rs = com.database.DemoMySql.executeQuery(""SELECT DISTINCT( groups.id),groups.name FROM club_managers LEFT JOIN cgroups ON club_managers.club_id = cgroups.club_id LEFT JOIN groups ON cgroups.group_id = groups.id JOIN teams on teams.cgroup_id=cgroups.id JOIN team_sheet on team_sheet.team_id=teams.id WHERE club_managers.manager_id = "" + person_id + "" AND groups.event_id = 2 ORDER BY groups.type DESC, groups.year DESC, groups.name DESC"")",Chrome 85.0.4183.83,,,2020-12-07 11:11:52,2020-12-07 11:11:52,0.003s,PASSED
+id = 0,Chrome 85.0.4183.83,,,2020-12-07 11:11:52,2020-12-07 11:11:52,0.001s,PASSED
+while (rs.next()),Chrome 85.0.4183.83,,,2020-12-07 11:11:52,2020-12-07 11:11:52,0.004s,PASSED
+"setText(findTestObject(""Object Repository/HKJFL_154_Club_Manager/Page_Team Sheet  Hong Kong Junior Football League/input_concat(id(, , select2-sel2-container,_b430b6""), x)",Chrome 85.0.4183.83,,,2020-12-07 11:11:52,2020-12-07 11:11:53,0.788s,PASSED
+"sendKeys(findTestObject(""Object Repository/HKJFL_154_Club_Manager/Page_Team Sheet  Hong Kong Junior Football League/input_concat(id(, , select2-sel2-container,_b430b6""), Keys.chord(ENTER))",Chrome 85.0.4183.83,,,2020-12-07 11:11:53,2020-12-07 11:11:53,0.493s,PASSED
+"click(findTestObject(""Object Repository/HKJFL_154_Club_Manager/Page_Team Sheet  Hong Kong Junior Football League/button_Select""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:53,2020-12-07 11:11:54,0.549s,PASSED
+"rs = com.database.DemoMySql.executeQuery(""SELECT COUNT( DISTINCT team_sheet.team_id) as 'count' FROM team_sheet LEFT JOIN teams ON team_sheet.team_id = teams.id LEFT JOIN cgroups ON teams.cgroup_id = cgroups.id LEFT JOIN club_managers ON club_managers.club_id = cgroups.club_id LEFT JOIN clubs ON cgroups.club_id = clubs.id LEFT JOIN groups ON cgroups.group_id = groups.id WHERE club_managers.manager_id = "" + person_id + "" AND groups.id = "" + i + "" ORDER BY team_id ASC"")",Chrome 85.0.4183.83,,,2020-12-07 11:11:54,2020-12-07 11:11:54,0.002s,PASSED
+number = 0,Chrome 85.0.4183.83,,,2020-12-07 11:11:54,2020-12-07 11:11:54,0.001s,PASSED
+while (rs.next()),Chrome 85.0.4183.83,,,2020-12-07 11:11:54,2020-12-07 11:11:54,0.001s,PASSED
+com.database.DemoMySql.closeDatabaseConnection(),Chrome 85.0.4183.83,,,2020-12-07 11:11:54,2020-12-07 11:11:54,0.001s,PASSED
+"Table = driver.findElement(By.xpath(""//table/tbody""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:54,2020-12-07 11:11:54,0.483s,PASSED
+"rows_table = Table.findElements(By.tagName(""tr""))",Chrome 85.0.4183.83,,,2020-12-07 11:11:54,2020-12-07 11:11:55,0.235s,PASSED
+rows_count = rows_table.size(),Chrome 85.0.4183.83,,,2020-12-07 11:11:55,2020-12-07 11:11:55,0.000s,PASSED
+if (rows_count == number && number == 1),Chrome 85.0.4183.83,,,2020-12-07 11:11:55,2020-12-07 11:11:55,0.251s,PASSED
+,,,,,,,
+Test Cases/JFL-166/JFL-166_AdminCanLockTeamSheet_CoachCannotSubmitTeam,Chrome 85.0.4183.83,,,2020-12-07 11:11:55,2020-12-07 11:16:13,4m - 17.623s,PASSED
+"callTestCase(findTestCase(""JFL-166/Resource/TestCase1/JFL-166_adminLockTeamSheet_1""), [:], STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-07 11:11:55,2020-12-07 11:14:16,2m - 21.363s,PASSED
+"callTestCase(findTestCase(""JFL-166/Resource/TestCase1/JFL-166_TeamCoachSubmitTeamSheet_2""), [:], STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-07 11:14:16,2020-12-07 11:16:13,1m - 56.154s,PASSED
+,,,,,,,
+Test Cases/JFL-166/JFL-166_AdminUnlockTeamSheet_CoachBeAbleToSubmitTeam,Chrome 85.0.4183.83,,,2020-12-07 11:16:13,2020-12-07 11:20:31,4m - 18.965s,PASSED
+"callTestCase(findTestCase(""JFL-166/Resource/TestCase2/JFL-166_adminUnLockTeamSheet_1""), [:], STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-07 11:16:13,2020-12-07 11:18:28,2m - 15.520s,PASSED
+"callTestCase(findTestCase(""JFL-166/Resource/TestCase2/JFL-166_TeamCoachSubmitTeamSheet_2""), [""email"":""wilfredwong@hkfcjuniorsoccer.com"", ""password"":""iGDxf8hSRT4=""], STOP_ON_FAILURE)",Chrome 85.0.4183.83,,,2020-12-07 11:18:28,2020-12-07 11:20:31,2m - 3.317s,PASSED

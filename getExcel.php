@@ -17,13 +17,39 @@ function getStatusFromExcel ($excelFile) {
     // Close the file
     fclose($h);
   }
+  // for ($row = 0; $row < count($the_big_array); $row++) {
+
+    //start at row 2 to skip header data
+    for ($a =2; $a < count( $the_big_array ); $a++) {
+
+      for ($b=0; $b < count( $the_big_array[$a] ); $b++) {
+
+        $str = $the_big_array[$a][$b];
+         if(strpos( $str, "Test Cases/") !== FALSE) 
+         {
+          $str="";
+
+          print ($the_big_array [$a][0]);
+          echo " ---------------";
+
+           print ($the_big_array[$a][7]); 
+           echo "<br>";
+         } 
+       
+        // if (strpos ($str,"Test Cases/") == true) {
+          
+        //   print ($the_big_array[$a][7]);
+
+        // }
+
+
+      }
+    }
+    // echo '<pre>';
+    // var_dump($the_big_array);
+    // echo '</pre>';
   
-  
-  print_r($the_big_array[1][7]);
 }
 
-echo ("STATUS is : ");
-getStatusFromExcel("data.csv");
-
-
-?>
+// echo ("STATUS is : ");
+getStatusFromExcel("result.csv");
